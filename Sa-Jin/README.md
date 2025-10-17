@@ -12,11 +12,13 @@ Sa-Jin/
     ├── ai.py           ← Basic computer opponent
     ├── board.py        ← Board and piece storage logic
     ├── cli.py          ← Text-based interface for playing the game
+    ├── gui.py          ← Mouse-driven interface powered by pygame
     ├── game.py         ← Core game rules and turn sequencing
     └── pieces.py       ← Piece definitions and attack range helpers
 ```
 
-The package is pure Python and has no third-party dependencies.
+The core engine is pure Python. The optional graphical interface requires
+[`pygame`](https://www.pygame.org/), which can be installed with `pip install pygame`.
 
 ## Running the game
 
@@ -38,6 +40,30 @@ python -m sa_jin.cli --mode cpu --cpu-side south
 ```
 
 The interface walks you through the placement phase, initial strong/weak assignments, and each subsequent turn. Type `quit` at any prompt to leave the game.
+
+### Graphical interface (mouse support)
+
+Install pygame if you have not already:
+
+```bash
+pip install pygame
+```
+
+Start the graphical client:
+
+```bash
+python -m sa_jin.gui
+```
+
+Use the buttons on the right-hand panel to choose counters during placement, set up swaps, and monitor recent game events. Click squares on the board to place counters, select moves, and resolve resurrections. The graphical interface supports both hot-seat and CPU play using the same command-line options as the CLI:
+
+```bash
+# Hot-seat mode
+python -m sa_jin.gui --mode pvp
+
+# CPU plays the South side and moves first
+python -m sa_jin.gui --mode cpu --cpu-side south
+```
 
 ## Counter types and attack ranges
 
