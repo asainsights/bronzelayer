@@ -49,6 +49,7 @@ class LevelPieces:
 # when the app runs.
 LEVEL_BLUEPRINT = [
     "XXXXXXXXX",
+    "X.......X",
     "XP..B..DX",
     "X..X....X",
     "X...S...X",
