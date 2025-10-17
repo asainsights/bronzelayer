@@ -59,11 +59,11 @@ LEVEL_BLUEPRINT = [
 # Friendly emojis for the default art set.  Young artists can swap any of these
 # inside the Streamlit sidebar and the board will update instantly.
 DEFAULT_ART: Dict[str, str] = {
-    "player": "🧑‍🚀",
+    "player": "😀",
     "floor": "⬜",
     "wall": "🧱",
     "crate": "📦",
-    "crate_on_switch": "✨📦",
+    "crate_on_switch": "✨",
     "switch": "🎛️",
     "door_closed": "🚪",
     "door_open": "🌟",
