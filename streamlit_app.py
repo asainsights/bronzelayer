@@ -446,6 +446,7 @@ with board_col:
             const resetValue = () => Streamlit.setComponentValue("");
 
             Streamlit.setComponentReady?.();
+            Streamlit.setFrameHeight?.(0);
             resetValue();
 
             const handledKeys = {
@@ -471,7 +472,6 @@ with board_col:
         </script>
         """,
         height=0,
-        key="keyboard-controller",
     )
 
     key_to_move = {
